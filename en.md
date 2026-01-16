@@ -1,4 +1,4 @@
-Trailverse - Terms of Service
+Trailverse.travel - Terms of Service
 =============================
 
 **Last Updated: January 16, 2026**
