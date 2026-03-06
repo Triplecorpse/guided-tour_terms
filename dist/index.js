@@ -1,6 +1,6 @@
 // Central exports for terms
-import enDefault from './terms/en';
-import ukDefault from './terms/uk';
+import enDefault from './terms/en.js';
+import ukDefault from './terms/uk.js';
 export const en = enDefault;
 export const uk = ukDefault;
 export const terms = {
