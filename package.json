@@ -27,8 +27,9 @@
     "uk.md"
   ],
   "scripts": {
-    "build": "tsc -p tsconfig.json",
+    "build": "npm run clean && tsc -p tsconfig.json && npm run copy:assets",
     "clean": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\"",
+    "copy:assets": "node -e \"const fs=require('fs'); fs.mkdirSync('dist/policy',{recursive:true}); fs.copyFileSync('src/policy/en.md','dist/policy/en.md');\"",
     "prepare": "npm run build",
     "test:smoke": "npm run build && node scripts/smoke.mjs"
   },
