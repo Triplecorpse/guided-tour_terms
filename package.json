@@ -29,7 +29,7 @@
   "scripts": {
     "build": "npm run clean && tsc -p tsconfig.json && npm run copy:assets",
     "clean": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\"",
-    "copy:assets": "node -e \"const fs=require('fs'); fs.mkdirSync('dist/policy',{recursive:true}); fs.copyFileSync('src/policy/en.md','dist/policy/en.md');\"",
+    "copy:assets": "node -e \"const fs=require('fs'); fs.mkdirSync('dist/policy',{recursive:true}); fs.mkdirSync('dist/terms',{recursive:true}); fs.copyFileSync('src/policy/en.md','dist/policy/en.md'); fs.copyFileSync('src/terms/en.md','dist/terms/en.md');\"",
     "prepare": "npm run build",
     "test:smoke": "npm run build && node scripts/smoke.mjs"
   },
