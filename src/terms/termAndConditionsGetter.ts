@@ -12,7 +12,7 @@ export async function getTermsAndConditions(lang: Lang): Promise<string> {
     }
 
     try {
-        const content = await fsp.readFile(new URL(`../../${targetLang}.md`, import.meta.url), 'utf-8');
+        const content = await fsp.readFile(new URL(`./${targetLang}.md`, import.meta.url), 'utf-8');
         terms[targetLang] = content;
         return content;
     } catch (error: unknown) {
