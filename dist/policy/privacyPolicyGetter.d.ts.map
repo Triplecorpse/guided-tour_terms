@@ -1,1 +1,1 @@
-{"version":3,"file":"privacyPolicyGetter.d.ts","sourceRoot":"","sources":["../../src/policy/privacyPolicyGetter.ts"],"names":[],"mappings":"AAAA,OAAO,EAAC,IAAI,EAAC,MAAM,aAAa,CAAC;AAKjC,wBAAsB,gBAAgB,CAAC,IAAI,EAAE,IAAI,GAAG,OAAO,CAAC,MAAM,CAAC,CAUlE"}
+{"version":3,"file":"privacyPolicyGetter.d.ts","sourceRoot":"","sources":["../../src/policy/privacyPolicyGetter.ts"],"names":[],"mappings":"AAAA,OAAO,EAAC,IAAI,EAAC,MAAM,aAAa,CAAC;AAKjC,wBAAsB,gBAAgB,CAAC,IAAI,EAAE,IAAI,GAAG,OAAO,CAAC,MAAM,CAAC,CA8BlE"}
