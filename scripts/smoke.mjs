@@ -1,11 +1,19 @@
-import { en, uk, getTerms, terms } from '../dist/index.js';
+import { getTermsAndConditions, getPrivacyPolicy } from '../dist/index.js';
+import en from '../dist/terms/en.js';
+import uk from '../dist/terms/uk.js';
+
+const termsEn = await getTermsAndConditions('en');
+const termsUk = await getTermsAndConditions('uk');
+const policyEn = await getPrivacyPolicy('en');
+const policyUk = await getPrivacyPolicy('uk');
 
 const checks = [
-  ['en export non-empty', en.length > 0],
-  ['uk export non-empty', uk.length > 0],
-  ['terms.en equals en', terms.en === en],
-  ['getTerms(en-US) resolves', getTerms('en-US') === en],
-  ['getTerms(ua) resolves to uk', getTerms('ua') === uk],
+  ['en subpath export non-empty', en.length > 0],
+  ['uk subpath export non-empty', uk.length > 0],
+  ['getTermsAndConditions(en) resolves', termsEn === en],
+  ['getTermsAndConditions(uk) resolves', termsUk === uk],
+  ['getPrivacyPolicy(en) resolves', policyEn.length > 0],
+  ['getPrivacyPolicy(uk) falls back to en', policyUk === policyEn],
 ];
 
 const failed = checks.filter(([, ok]) => !ok);
